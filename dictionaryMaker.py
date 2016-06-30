@@ -18393,6 +18393,7 @@ data = {
 'windlass': 'Germanic',
 'window': 'Germanic',
 'wing': 'Germanic',
+'worth': 'Germanic',
 'wrong': 'Germanic',
 'yggdrasil': 'Germanic',
 'cog': 'Germanic',

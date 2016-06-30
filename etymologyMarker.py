@@ -59,6 +59,9 @@ def removeAffixes(formattedList, allWords):
         for suffix in suffix_list:
             if getOrigin(formattedList[x], allWords) == None:
                 formattedList[x] = re.sub(suffix, '', formattedList[x])
+				
+	    if getOrigin(formattedList[x], allWords) == None:
+			formattedList[x] = re.sub('fully$', 'ful', formattedList[x])
 
         if getOrigin(re.sub('ly$', "le", formattedList[x]), allWords) != None:  # Replaces -ly with -le if that produces a word.
             formattedList[x] = re.sub('ly$', 'le', formattedList[x])    
@@ -118,7 +121,7 @@ languages = {'Anglo':    {'colour': '8BC34A', 'word count': 0, 'colour name': 'G
              'Arabic':   {'colour': 'AF7AC5', 'word count': 0, 'colour name': 'Purple',     'long name': 'Arabic'},
              'Greek':    {'colour': '26C6DA', 'word count': 0, 'colour name': 'Blue',       'long name': 'Greek'},
              'Spanish':  {'colour': 'FA7921', 'word count': 0, 'colour name': 'Orange',     'long name': 'Spanish'},
-             'Celtic':   {'colour': '1976D2', 'word count': 0, 'colour name': 'Indigo', 'long name': 'other Celtic (Common Brittonic, Gaulish, Irish, Scottish Gaelic, Welsh)'}
+             'Celtic':   {'colour': '1976D2', 'word count': 0, 'colour name': 'Indigo',     'long name': 'other Celtic (Common Brittonic, Gaulish, Irish, Scottish Gaelic, Welsh)'}
             }
 languages = collections.OrderedDict(sorted(languages.items()))
 
