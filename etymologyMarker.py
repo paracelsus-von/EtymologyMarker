@@ -59,9 +59,9 @@ def removeAffixes(formattedList, allWords):
         for suffix in suffix_list:
             if getOrigin(formattedList[x], allWords) == None:
                 formattedList[x] = re.sub(suffix, '', formattedList[x])
-				
-	    if getOrigin(formattedList[x], allWords) == None:
-			formattedList[x] = re.sub('fully$', 'ful', formattedList[x])
+                
+        if getOrigin(formattedList[x], allWords) == None:
+            formattedList[x] = re.sub('fully$', 'ful', formattedList[x])
 
         if getOrigin(re.sub('ly$', "le", formattedList[x]), allWords) != None:  # Replaces -ly with -le if that produces a word.
             formattedList[x] = re.sub('ly$', 'le', formattedList[x])    
@@ -115,13 +115,16 @@ def pieChart(legend, colours):
 </html>"""
 
 languages = {'Anglo':    {'colour': '8BC34A', 'word count': 0, 'colour name': 'Green',      'long name': 'Anglo-Saxon' },
-             'Germanic': {'colour': '43A047', 'word count': 0, 'colour name': 'Dark green', 'long name': 'other Germanic (Old Norse, Scandinavian, German, Dutch)'},
-             'French':   {'colour': 'FDD835', 'word count': 0, 'colour name': 'Yellow',     'long name': 'French'},
+             'Germanic': {'colour': '4CAF50', 'word count': 0, 'colour name': 'Dark green', 'long name': 'other Germanic (Old Norse, Scandinavian, German, Dutch)'},
+             'French':   {'colour': 'FFC107', 'word count': 0, 'colour name': 'Amber',      'long name': 'French'},
              'Latin':    {'colour': 'F44336', 'word count': 0, 'colour name': 'Red',        'long name': 'Latin'},
-             'Arabic':   {'colour': 'AF7AC5', 'word count': 0, 'colour name': 'Purple',     'long name': 'Arabic'},
-             'Greek':    {'colour': '26C6DA', 'word count': 0, 'colour name': 'Blue',       'long name': 'Greek'},
-             'Spanish':  {'colour': 'FA7921', 'word count': 0, 'colour name': 'Orange',     'long name': 'Spanish'},
-             'Celtic':   {'colour': '1976D2', 'word count': 0, 'colour name': 'Indigo',     'long name': 'other Celtic (Common Brittonic, Gaulish, Irish, Scottish Gaelic, Welsh)'}
+             'Arabic':   {'colour': '7B1FA2', 'word count': 0, 'colour name': 'Purple',     'long name': 'Arabic'},
+             'Greek':    {'colour': '03A9F4', 'word count': 0, 'colour name': 'Light Blue', 'long name': 'Greek'},
+             'Spanish':  {'colour': 'FF5722', 'word count': 0, 'colour name': 'Orange',     'long name': 'Spanish'},
+             'Celtic':   {'colour': '009688', 'word count': 0, 'colour name': 'Teal',       'long name': 'other Celtic (Common Brittonic, Gaulish, Irish, Scottish Gaelic, Welsh)'},
+             'Italian':  {'colour': 'FFEB3B', 'word count': 0, 'colour name': 'Yellow',     'long name': 'Italian'},
+             'Indian':   {'colour': 'E040FB', 'word count': 0, 'colour name': 'Lilac',      'long name': 'Indian'},
+             'Malay':    {'colour': '303F9F', 'word count': 0, 'colour name': 'Indigo',     'long name': 'Malay'},
             }
 languages = collections.OrderedDict(sorted(languages.items()))
 
